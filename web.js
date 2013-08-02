@@ -3,7 +3,8 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-     
+var buf = Buffer (128);
+    
   response.send(buf.toString(fs.readFileSync("index.html")));
 });
 
